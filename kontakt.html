@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kontakt – WebWithIT Studio</title>
+<meta name="description" content="Skontaktuj się z WebWithIT Studio. Opowiedz nam o swoim projekcie — odpiszemy w ciągu 24 godzin.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://webwithit.pl/kontakt.html">
+<meta property="og:title" content="Kontakt – WebWithIT Studio">
+<meta property="og:description" content="Skontaktuj się z WebWithIT Studio. Opowiedz nam o swoim projekcie — odpiszemy w ciągu 24 godzin.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root { --cyan: #7dd3fc; --white-10: rgba(255,255,255,0.085); --slate-950: #05060a; --slate-900: #0c0e14; --ease-out-expo: cubic-bezier(0.16,1,0.3,1); --radius-md: 18px; --radius-lg: 24px; --radius-xl: 32px; --violet: #8a50fa; --violet-bright: #a78bfa; --violet-glow: rgba(138,80,250,0.45); }
+html { scroll-behavior: smooth; }
+body { color: rgba(255,255,255,0.94); font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; font-feature-settings: "ss01" 1; overflow-x: hidden; -webkit-font-smoothing: antialiased; background-color: var(--slate-950); background-image: radial-gradient(ellipse 100% 70% at 50% -20%, rgba(138,80,250,0.12), transparent 55%), linear-gradient(165deg, #06070f 0%, var(--slate-950) 38%, #04050c 100%); background-attachment: fixed; min-height: 100vh; padding-bottom: max(100px, calc(88px + env(safe-area-inset-bottom, 0px))); }
+.container { max-width: 1160px; margin: 0 auto; padding: 0 48px; }
+@media (max-width: 768px) { .container { padding: 0 22px; } }
+.hl { background: linear-gradient(105deg, var(--violet-bright) 0%, var(--cyan) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+.badge { display: inline-flex; align-items: center; gap: 8px; border: 1px solid rgba(255,255,255,0.1); background: linear-gradient(135deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02)); border-radius: 999px; padding: 7px 17px; font-size: 12px; font-weight: 500; letter-spacing: 0.02em; color: rgba(255,255,255,0.58); }
+.badge.section-label::before { content: ''; display: inline-block; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%; background: linear-gradient(135deg, var(--violet-bright), var(--cyan)); box-shadow: 0 0 8px var(--violet-glow); }
+.section { padding: 96px 0; border-top: 1px solid rgba(255,255,255,0.035); }
+.section-h2 { font-size: clamp(28px, 3.6vw, 46px); font-weight: 700; letter-spacing: -0.035em; line-height: 1.08; }
+.section-p { color: rgba(255,255,255,0.55); font-size: 16px; line-height: 1.78; margin-top: 16px; font-weight: 450; }
+.fade-up { opacity: 0; transform: translateY(24px); transition: opacity 0.55s ease, transform 0.55s ease; transition-delay: var(--delay, 0s); }
+.fade-up.visible { opacity: 1; transform: none; }
+.back-link { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.45); font-size: 13px; font-weight: 500; text-decoration: none; transition: color 0.2s; margin: 20px 0 0; }
+.back-link:hover { color: rgba(255,255,255,0.85); }
+.back-link svg { width: 16px; height: 16px; }
+
+/* ── Hero ── */
+.contact-hero { padding: 72px 0 64px; }
+.contact-hero h1 { font-size: clamp(36px, 5vw, 62px); font-weight: 700; letter-spacing: -0.04em; line-height: 1.02; margin: 20px 0 20px; max-width: 680px; }
+.contact-hero p { color: rgba(255,255,255,0.55); font-size: 17px; line-height: 1.75; max-width: 32rem; }
+
+/* ── Contact grid ── */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; margin-top: 64px; align-items: start; }
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+
+/* ── Info column ── */
+.contact-info { display: flex; flex-direction: column; gap: 20px; }
+.contact-item { border-radius: var(--radius-lg); border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.025); padding: 22px 24px; display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-items: start; transition: border-color 0.25s, background 0.25s; }
+.contact-item:hover { border-color: rgba(138,80,250,0.25); background: rgba(138,80,250,0.04); }
+.contact-item-icon { width: 40px; height: 40px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 18px; border: 1px solid rgba(138,80,250,0.3); background: linear-gradient(145deg, rgba(138,80,250,0.2), rgba(138,80,250,0.04)); flex-shrink: 0; }
+.contact-item h3 { font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.contact-item p, .contact-item a { font-size: 13px; color: rgba(255,255,255,0.52); line-height: 1.6; text-decoration: none; transition: color 0.2s; }
+.contact-item a:hover { color: var(--violet-bright); }
+
+.services-quick { margin-top: 28px; }
+.services-quick h4 { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.32); margin-bottom: 12px; }
+.services-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.services-tag { border-radius: 999px; border: 1px solid rgba(255,255,255,0.1); background: rgba(255,255,255,0.04); padding: 6px 14px; font-size: 12px; color: rgba(255,255,255,0.55); text-decoration: none; transition: border-color 0.2s, color 0.2s, background 0.2s; }
+.services-tag:hover { border-color: rgba(138,80,250,0.35); color: var(--violet-bright); background: rgba(138,80,250,0.07); }
+
+/* ── Form ── */
+.contact-form-wrap { border-radius: var(--radius-xl); border: 1px solid rgba(255,255,255,0.1); background: linear-gradient(165deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02)); padding: 40px; backdrop-filter: blur(20px); box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 32px 80px rgba(0,0,0,0.25); }
+.form-title { font-size: 20px; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 28px; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 560px) { .form-grid { grid-template-columns: 1fr; } }
+.form-group { display: flex; flex-direction: column; gap: 7px; }
+.form-group.full { grid-column: 1 / -1; }
+.form-label { font-size: 12px; font-weight: 600; letter-spacing: 0.03em; color: rgba(255,255,255,0.55); }
+.form-input, .form-select, .form-textarea {
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.04);
+  color: rgba(255,255,255,0.92);
+  font-family: inherit; font-size: 14px;
+  padding: 12px 16px;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+  outline: none; width: 100%;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: rgba(138,80,250,0.55);
+  background: rgba(138,80,250,0.05);
+  box-shadow: 0 0 0 3px rgba(138,80,250,0.12);
+}
+.form-input::placeholder, .form-textarea::placeholder { color: rgba(255,255,255,0.28); }
+.form-select { appearance: none; -webkit-appearance: none; cursor: pointer; }
+.form-select option { background: #141822; color: rgba(255,255,255,0.9); }
+.form-textarea { resize: vertical; min-height: 130px; line-height: 1.6; }
+.form-submit { margin-top: 8px; width: 100%; padding: 15px 28px; border-radius: var(--radius-md); font-size: 15px; font-weight: 600; cursor: pointer; border: none; background: linear-gradient(180deg, #ffffff 0%, #f0f2f6 100%); color: #0a0c12; box-shadow: 0 1px 0 rgba(255,255,255,0.65) inset, 0 12px 40px -8px rgba(255,255,255,0.22), 0 4px 16px rgba(0,0,0,0.35); transition: transform 0.35s var(--ease-out-expo), box-shadow 0.35s var(--ease-out-expo); }
+.form-submit:hover { transform: translateY(-2px); box-shadow: 0 1px 0 rgba(255,255,255,0.75) inset, 0 18px 48px -6px rgba(125,211,252,0.25), 0 8px 24px rgba(0,0,0,0.4); }
+.form-note { margin-top: 14px; font-size: 12px; color: rgba(255,255,255,0.32); text-align: center; line-height: 1.6; }
+.form-success { display: none; text-align: center; padding: 24px; }
+.form-success h3 { font-size: 18px; font-weight: 600; margin-bottom: 8px; }
+.form-success p { font-size: 14px; color: rgba(255,255,255,0.55); }
+
+footer { border-top: 1px solid rgba(255,255,255,0.08); padding: 48px 0 56px; }
+.footer-inner { display: grid; grid-template-columns: 1fr auto auto auto; gap: 48px; color: rgba(255,255,255,0.38); }
+@media (max-width: 768px) { .footer-inner { grid-template-columns: 1fr 1fr; gap: 28px; } }
+.footer-brand .footer-brand-name { font-size: 14px; font-weight: 600; color: rgba(255,255,255,0.72); margin-bottom: 6px; }
+.footer-brand p { font-size: 12px; line-height: 1.65; max-width: 220px; }
+.footer-col h5 { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.32); margin-bottom: 14px; }
+.footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; margin-bottom: 9px; transition: color 0.2s; }
+.footer-col a:hover { color: rgba(255,255,255,0.88); }
+.footer-bottom { margin-top: 36px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.07); font-size: 11px; color: rgba(255,255,255,0.28); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+.footer-bottom a { color: rgba(255,255,255,0.38); text-decoration: none; }
+
+#site-dock-wrap { position: fixed; left: 0; right: 0; bottom: max(14px, env(safe-area-inset-bottom, 14px)); z-index: 8000; display: flex; justify-content: center; padding: 0 12px; pointer-events: none; }
+#site-dock { pointer-events: auto; padding: 10px 12px; border-radius: 26px; background: linear-gradient(to bottom, rgba(255,255,255,0.07), rgba(255,255,255,0.16)); box-shadow: rgba(255,255,255,0.14) 0 0 0 1px inset, 0 12px 40px rgba(0,0,0,0.5), 0 0 80px rgba(138,80,250,0.1); backdrop-filter: blur(28px) saturate(1.45); }
+#site-dock ul { display: flex; list-style: none; align-items: flex-end; gap: 4px; padding: 0; margin: 0; }
+.site-dock-app { width: 50px; height: 50px; position: relative; flex-shrink: 0; transition: width 0.1s cubic-bezier(0.25,1,0.5,1), height 0.1s cubic-bezier(0.25,1,0.5,1), margin-top 0.1s cubic-bezier(0.25,1,0.5,1); }
+.site-dock-app:hover, .site-dock-app:focus-within { width: 74px; height: 74px; margin-top: -20px; }
+.site-dock-app a { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; border-radius: 14px; background: linear-gradient(145deg, rgba(255,255,255,0.13), rgba(255,255,255,0.04)); box-shadow: rgba(255,255,255,0.1) 0 0 0 1px inset; color: #fff; text-decoration: none; transition: box-shadow 0.2s, background 0.2s; }
+.site-dock-app a:hover { box-shadow: rgba(138,80,250,0.5) 0 0 0 1px inset, 0 0 28px rgba(138,80,250,0.35); background: linear-gradient(145deg, rgba(138,80,250,0.38), rgba(255,255,255,0.1)); }
+.site-dock-app.site-dock-cta { margin-left: 10px; }
+.site-dock-app.site-dock-cta::before { content: ''; position: absolute; left: -9px; top: 50%; transform: translateY(-50%); width: 1px; height: 34px; background: linear-gradient(180deg, transparent, rgba(255,255,255,0.22), transparent); pointer-events: none; }
+.site-dock-app.site-dock-cta a { background: linear-gradient(180deg, #ffffff, #e8eaef); color: #0a0c12; }
+.site-dock-app svg { width: 26px; height: 26px; opacity: 0.95; }
+.site-dock-app:hover svg, .site-dock-app:focus-within svg { width: 38px; height: 38px; transition: width 0.1s ease, height 0.1s ease; }
+.site-dock-app.site-dock-cta svg { stroke: #0a0c12; }
+.site-dock-tooltip { position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%) translateY(4px); opacity: 0; pointer-events: none; transition: opacity 0.12s ease, transform 0.12s ease; background: rgba(12,14,20,0.92); border: 1px solid rgba(255,255,255,0.12); padding: 6px 11px; border-radius: 10px; font-size: 11px; font-weight: 600; color: rgba(255,255,255,0.94); white-space: nowrap; }
+.site-dock-app:hover .site-dock-tooltip, .site-dock-app:focus-within .site-dock-tooltip { opacity: 1; transform: translateX(-50%) translateY(0); }
+</style></head>
+<body>
+<div id="site-dock-wrap">
+  <nav id="site-dock">
+    <ul>
+      <li class="site-dock-app"><a href="strony-internetowe.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg><span class="site-dock-tooltip">Strony WWW</span></a></li>
+      <li class="site-dock-app"><a href="aplikacje-webowe.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span class="site-dock-tooltip">Aplikacje</span></a></li>
+      <li class="site-dock-app"><a href="uslugi-it.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg><span class="site-dock-tooltip">Usługi IT</span></a></li>
+      <li class="site-dock-app"><a href="plik strony wtepny.html#oferta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg><span class="site-dock-tooltip">Oferta</span></a></li>
+      <li class="site-dock-app site-dock-cta"><a href="kontakt.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linejoin="round"><path d="M21 15a4 4 0 01-4 4H8l-5 3V7a4 4 0 014-4h10a4 4 0 014 4v8z"/></svg><span class="site-dock-tooltip">Kontakt</span></a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="container"><a href="plik strony wtepny.html" class="back-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>WebWithIT Studio</a></div>
+
+<section style="padding: 72px 0 0;">
+  <div class="container">
+    <div class="contact-hero fade-up">
+      <div class="badge section-label">Kontakt</div>
+      <h1>Porozmawiajmy o <span class="hl">Twoim projekcie</span></h1>
+      <p>Wypełnij formularz lub napisz bezpośrednio — odpiszemy w ciągu 24&nbsp;godzin roboczych.</p>
+    </div>
+    <div class="contact-grid">
+      <!-- Info -->
+      <div class="contact-info fade-up" style="--delay:0.08s">
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div>
+            <h3>E-mail</h3>
+            <a href="mailto:hello@webwithit.pl">hello@webwithit.pl</a>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">⏱️</div>
+          <div>
+            <h3>Czas odpowiedzi</h3>
+            <p>Odpiszemy w ciągu 24 godzin roboczych</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div>
+            <h3>Obszar działania</h3>
+            <p>Pracujemy zdalnie z klientami z całej Polski</p>
+          </div>
+        </div>
+        <div class="services-quick">
+          <h4>Pytasz o</h4>
+          <div class="services-tags">
+            <a href="strony-internetowe.html" class="services-tag">Stronę internetową</a>
+            <a href="aplikacje-webowe.html" class="services-tag">Aplikację webową</a>
+            <a href="uslugi-it.html" class="services-tag">Usługi IT</a>
+            <a href="uslugi-it.html" class="services-tag">Wsparcie techniczne</a>
+            <a href="plik strony wtepny.html#oferta" class="services-tag">Wycenę projektu</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="fade-up" style="--delay:0.14s">
+        <div class="contact-form-wrap">
+          <div class="form-title">Napisz do nas</div>
+          <form id="contact-form" novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="f-name">Imię i nazwisko</label>
+                <input class="form-input" id="f-name" type="text" placeholder="Jan Kowalski" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-email">Adres e-mail</label>
+                <input class="form-input" id="f-email" type="email" placeholder="jan@firma.pl" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-company">Firma (opcjonalnie)</label>
+                <input class="form-input" id="f-company" type="text" placeholder="Nazwa firmy" autocomplete="organization">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-service">Czego dotyczy zapytanie</label>
+                <select class="form-select" id="f-service">
+                  <option value="">Wybierz usługę…</option>
+                  <option>Strona internetowa</option>
+                  <option>Aplikacja webowa</option>
+                  <option>Usługi IT / wsparcie</option>
+                  <option>Inne</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label class="form-label" for="f-message">Wiadomość</label>
+                <textarea class="form-textarea" id="f-message" placeholder="Opisz krótko swój projekt lub pytanie…" required></textarea>
+              </div>
+            </div>
+            <button type="submit" class="form-submit">Wyślij wiadomość →</button>
+            <p class="form-note">Nie wysyłamy spamu. Twoje dane są bezpieczne.</p>
+          </form>
+          <div class="form-success" id="form-success">
+            <div style="font-size:40px;margin-bottom:12px">✅</div>
+            <h3>Wiadomość wysłana!</h3>
+            <p>Dziękujemy za kontakt. Odpiszemy w ciągu 24 godzin roboczych.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="margin-top: 96px;">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand"><div class="footer-brand-name">WebWithIT Studio</div><p>Strony internetowe, aplikacje webowe i kompleksowe usługi IT.</p><p style="margin-top:10px"><a href="mailto:hello@webwithit.pl" style="color:rgba(255,255,255,0.45);text-decoration:none;font-size:12px">hello@webwithit.pl</a></p></div>
+      <div class="footer-col"><h5>Usługi</h5><a href="strony-internetowe.html">Strony internetowe</a><a href="aplikacje-webowe.html">Aplikacje webowe</a><a href="uslugi-it.html">Usługi IT</a></div>
+      <div class="footer-col"><h5>Firma</h5><a href="plik strony wtepny.html#jak-pracujemy">Jak pracujemy</a><a href="plik strony wtepny.html#dlaczego-my">O nas</a><a href="plik strony wtepny.html#oferta">Oferta</a></div>
+      <div class="footer-col"><h5>Kontakt</h5><a href="kontakt.html">Formularz kontaktowy</a><a href="mailto:hello@webwithit.pl">hello@webwithit.pl</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2025 WebWithIT Studio · Wszelkie prawa zastrzeżone</span><span><a href="#">Polityka prywatności</a></span></div>
+  </div>
+</footer>
+
+<script>
+var obs = new IntersectionObserver(function(entries) { entries.forEach(function(e) { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } }); }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+document.querySelectorAll('.fade-up').forEach(function(el) { obs.observe(el); });
+
+document.getElementById('contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var name = document.getElementById('f-name').value.trim();
+  var email = document.getElementById('f-email').value.trim();
+  var msg = document.getElementById('f-message').value.trim();
+  if (!name || !email || !msg) return;
+  this.style.display = 'none';
+  document.getElementById('form-success').style.display = 'block';
+});
+</script></body>
+</html>
